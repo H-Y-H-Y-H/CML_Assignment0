@@ -10,4 +10,4 @@ Requirements:
 2. The end-effector should be always parallel to the base as shown in the reference link.
 3. Feel free to use existing CAD and combine them into your CAD.
 4. Please write a report and describe how to manufacture the robot.
-
+5. Use the motors in motor224 folder.

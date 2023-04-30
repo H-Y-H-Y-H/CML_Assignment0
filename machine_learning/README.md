@@ -9,7 +9,7 @@ For each row in the .txt data file, it describes the state of objects.
 (x0, y0, width0, height0, angle0), (x0, y0, width0, height0, angle0), ... \
 The length of each row = num_obj *5 \
 Please feel free to run data_visualization.py to see the difference between inputs and labels. \
-Noted, the input size is varying. You can set a maximum input size: 5*15 --> 5 parameters x 15 objects.
+Noted, the input size is varying. You can set a maximum input size: 5x15 --> 5 parameters x 15 objects.
 
 ### Test Instructions
 Design a neural network with **Pytorch** that can fit the dataset. 

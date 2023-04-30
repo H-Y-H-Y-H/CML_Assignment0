@@ -2,7 +2,9 @@
 
 The robot will be designed to use deep learning algorithms in real-time, and there are two approaches to implement this:
 board computation and cloud computation. 
-You have to choose one of these approaches and design a circuit accordingly. Here are the details of the test:
+You have to choose one of these approaches and design a circuit accordingly. 
+
+**Here are the details of the report you need to submit:**
 
 Microcontroller: The microcontroller to be used in the circuit can be Arduino, Raspberry Pi, Jetson, Teensy, or any other 
 microcontroller of your choice. 
