@@ -4,6 +4,10 @@ The robot will be designed to use deep learning algorithms in real-time, and the
 board computation and cloud computation. 
 You have to choose one of these approaches and design a circuit accordingly. 
 
+
+**Updates:** There is no limitation to the robot's functionality, so feel free to design the robot you are most familiar with. Also, I will be impressed if you list more than one robot with different circuits.
+
+
 **Here are the details of the report you need to submit:**
 
 Microcontroller: The microcontroller to be used in the circuit can be Arduino, Raspberry Pi, Jetson, Teensy, or any other 
