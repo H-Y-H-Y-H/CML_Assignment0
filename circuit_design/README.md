@@ -9,11 +9,11 @@ You have to choose one of these approaches and design a circuit accordingly.
 Microcontroller: The microcontroller to be used in the circuit can be Arduino, Raspberry Pi, Jetson, Teensy, or any other 
 microcontroller of your choice. 
 
-Motors: The robot will have 12 motors. you will have to select advanced motors that they have used before and 
+Motors: The robot will have 12 motors. you will have to select advanced motors that you have used before and 
 provide details such as brand, voltage, and other specifications. You should also be able to explain how 
 to observe the state of the motors.
 
-Communication Protocol: You will have to explain how they will communicate with the motors they select.
+Communication Protocol: You will have to explain how they will communicate with the motors you select.
 For example, you might use I2C, CAN BUS, or any other protocol of your choice.
 
 Power Arrangement: You will have to design a PCB board for the power arrangement with a lipo-battery, 
