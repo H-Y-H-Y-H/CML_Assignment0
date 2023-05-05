@@ -23,8 +23,7 @@ Please use 70% data for training, 20% data for validation and 10% data for test.
 ### Report Quality:
 The clarity and completeness of your report, including detailed explanations of your neural network design, training process, and testing results.
 
-
-
+Hint: Do not treat this test as a simple supervised learning task. A good machine learning algorithm designer should also have a good intuition of the data and an ability to extract critical information from the raw dataset. 
 
 
 
