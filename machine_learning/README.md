@@ -23,8 +23,12 @@ Please use 70% data for training, 20% data for validation and 10% data for test.
 ### Report Quality:
 The clarity and completeness of your report, including detailed explanations of your neural network design, training process, and testing results.
 
-Hint: Do not treat this test as a simple supervised learning task. A good machine learning algorithm designer should also have a good intuition of the data and an ability to extract critical information from the raw dataset. 
+Hint: 
+1. Do not treat this test as a simple supervised learning task. A good machine learning algorithm designer should also have a good intuition of the data and an ability to extract critical information from the raw dataset. 
 
+2. If you visualizing the dataset or use correlation analysis, you can easily find out that the x, y values of the input are not necessary. You can get rid of these two numbers when you feed the input into the model.
+
+3. Use Transformer architecture 
 
 
 
