@@ -1,30 +1,24 @@
-## Machine Learning Test
+## Machine Learning Test 2024
 
 This test is designed to evaluate the Machine Learning skills of students in the machine learning field.
-This test aims to design a neural network that can fit a dataset with varying input and output sizes. 
-The dataset contains information about the state of objects on a table, including their position, orientation, and size before and after being moved.
+This test aims to design a deep generative model to generate a label image based on a given input image.
 
-### Data representation:
-For each row in the .txt data file, it describes the state of objects.
-(x0, y0, width0, length0, angle0), (x1, y1, width1, length1, angle1), ... \
-The length of each row = num_obj *5 \
-Please run data_visualization.py to see the difference between inputs and labels. \
-Noted, the input size is varying. You can set a maximum input size: 5x15 --> 5 parameters x 15 objects.
+### Data:
+1. Image Specifications: The original dataset contains images of size 480x640x3. You are allowed to resize these images to lower resolutions to accommodate your model's requirements.
+2. Data Generation: Utilize the data_generator.py script provided to generate the necessary data for model training and evaluation.
+3. Training and Testing Split: For each num_N.txt file in the dataset, use the first 80% of the data for training your model. The remaining 20% should be used for testing its performance.
+4. Dataset Utilization: While it's recommended to use the entire dataset for a comprehensive training approach, you may choose to focus on a specific pair of files from the dataset to limit the number of objects in the image, depending on your model's complexity and training capacity.
 
-### Model Performance: 
-The ability of your neural network to accurately fit the dataset and generalize to new data.
-Please use 70% data for training, 20% data for validation and 10% data for test.
+### Model Training and Evaluation: 
+1. Develop your model or download the SOTA using PyTorch, ensuring it's capable of generating high-quality label images from the input data.
+2. After training, use the generate.py script to generate images based on the test set. 
+Make sure to save these generated images for evaluation purposes.
 
-### Report Quality:
-The clarity and completeness of your report, including detailed explanations of your neural network design, training process, and testing results.
-
-### Test Instructions
-1. Design a neural network with **Pytorch** that can fit the dataset. 
-2. If you visualize the dataset or use correlation analysis, you can easily find out that the x y values of the input are not necessary. You can eliminate these two numbers when you feed the input into the model.
-3. Use Transformer architecture, Auto regression, and Gaussian Mixture Model.
-4. The input of your model is a list of object states: [(width0, length0), (width1, length1), ... (widthN,lengthN)].
-5. The output of your model is a list of object positions. [(x0, y0), (x1, y1), ... (xN,yN)].
-6. Use GMM, so that your model output is not deterministic.
+### Others:
+1. There is no fixed deadline for this test. Our primary goal is to identify talented individuals with a passion for machine learning 
+and a knack for innovative problem-solving. Take the time you need to showcase your best work.
+2. This project could potentially lead to significant publications. If you are interested in PhD program,
+this is a good opportunity.
 
 
 
