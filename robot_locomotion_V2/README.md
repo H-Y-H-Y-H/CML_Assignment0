@@ -1,24 +1,60 @@
-## Machine Learning Test 2024 Summer
+# Robot Locomotion Controller and DNN Trainer
 
-This test is designed to evaluate the Machine Learning skills of students in the robotics field.
-This test aims to design a controller for a legged robot.
+This project includes a Python-based robotic simulation environment designed for developing and testing locomotion controllers. Additionally, it features a module for training a Deep Neural Network (DNN) to predict new states (NS) based on sensory inputs (S) and actions (A) using collected SANS data.
 
-### Data:
-1. Image Specifications: The original dataset contains images of size 480x640x3. You are allowed to resize these images to lower resolutions to accommodate your model's requirements.
-2. Data Generation: Utilize the data_generator.py script provided to generate the necessary data for model training and evaluation.
-3. Training and Testing Split: For each num_N.txt file in the dataset, use the first 80% of the data for training your model. The remaining 20% should be used for testing its performance.
-4. Dataset Utilization: While it's recommended to use the entire dataset for a comprehensive training approach, you may choose to focus on a specific pair of files from the dataset to limit the number of objects in the image, depending on your model's complexity and training capacity.
+## Project Structure
 
-### Model Training and Evaluation: 
-1. Develop your model or download the SOTA using PyTorch, ensuring it's capable of generating high-quality label images from the input data.
-2. After training, use the generate.py script to generate images based on the test set. 
-Make sure to save these generated images for evaluation purposes.
+- `V000_env.py`: Contains the custom environment class for the robot simulation.
+- `main.py`: Entry point for implementing the robot controller and initiating training of the DNN.
+- `model.py`: Use Pytorch to design a DNN.
+- `requirements.txt`: Lists all the dependencies required for the project.
 
-### Others:
-1. There is no fixed deadline for this test. Our primary goal is to identify talented individuals with a passion for machine learning 
-and a knack for innovative problem-solving. Take the time you need to showcase your best work.
-2. This project could potentially lead to significant publications. If you are interested in PhD program,
-this is a good opportunity.
+## Prerequisites
+
+- Python 3.9
+
+## Installation
+
+First, ensure you have Python 3.9 installed on your machine.
+
+Next, clone this repository to your local machine and install the required packages using:
+
+```bash
+git clone <repository-url>
+cd <repository-directory>
+pip install -r requirements.txt
+pip install torch torchvision torchaudio
+```
 
 
+## Requirements:
+### 1. Designing the Controller
+Ensure your controller uses the methods provided in V000_env.py to interact with the simulation environment.
+Develop a controller that enables the robot to move forward. The controller should implement a mechanism to 
+apply actions with a Gaussian noise of standard deviation 
+s=0.1. This is essential to simulate realistic actuation where perfect precision isn't achievable.
 
+### 2. Collect SANS Data
+Using the designed controller, run the robot simulation to collect data for training. The data should be structured as follows:
+
+SANS: V000_env.py line 164
+
+S (State): The current state of the robot, which may include positions, velocities, and other relevant sensory data.\
+A (Action): The action taken by the controller, post-noise application.\
+NS (New State): The state of the robot after the action is applied.\
+Data Collection: Store the sequence of S, A, NS tuples during each simulation run.
+
+### 3. Design a Deep Neural Network (DNN) Model
+Create a DNN model in model.py that will learn to predict the next state (NS) based on the current state (S) and the action (A) applied.
+
+Inputs: Current state (S) and action (A).\
+Outputs: Predicted next state (NS).\
+Architecture: Define an appropriate neural network architecture capable of capturing the dynamics of the robot's movements.
+
+
+### 4. Train the DNN
+Develop a training routine for the DNN model using the collected SANS data.
+
+Training Data: Use the SANS data collected from the simulations.\
+Objective: Minimize the difference between the predicted next state and the actual next state observed in the data.\
+Evaluation: Assess the model's performance based on loss metrics with a validation set to ensure generalization.
