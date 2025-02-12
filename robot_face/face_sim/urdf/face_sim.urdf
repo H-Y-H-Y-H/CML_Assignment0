@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="face_sim">
+  <link
+    name="base">
+    <inertial>
+      <origin
+        xyz="2.68945227636862E-17 -3.12963187120367E-17 0.05549784707376"
+        rpy="0 0 0" />
+      <mass
+        value="3.93487087508394" />
+      <inertia
+        ixx="0.0164037485855414"
+        ixy="2.11758236813575E-18"
+        ixz="1.3663472170847E-18"
+        iyy="0.0164037485855414"
+        iyz="1.07063402749761E-18"
+        izz="0.0221360581901392" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/base.STL" />
+      </geometry>
+      <material
+        name="gray">
+        <color
+          rgba="0.4 0.4 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="neck1">
+    <inertial>
+      <origin
+        xyz="3.78327698062032E-08 0.0168408963316987 5.45042140707771E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.0428358252622499" />
+      <inertia
+        ixx="1.30351951431094E-05"
+        ixy="-2.03695825045151E-11"
+        ixz="-7.85469796213671E-12"
+        iyy="1.97675280969146E-05"
+        iyz="-3.25276988063011E-12"
+        izz="2.58770182246373E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/neck1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/neck1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_neck1"
+    type="continuous">
+    <origin
+      xyz="0 0 0.25"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base" />
+    <child
+      link="neck1" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="neck2">
+    <inertial>
+      <origin
+        xyz="-3.23137594229857E-18 0 6.05975968505346E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0244634954084936" />
+      <inertia
+        ixx="3.63679938779916E-06"
+        ixy="-1.10290748340399E-24"
+        ixz="-3.68418760233391E-22"
+        iyy="3.4304249146369E-06"
+        iyz="-1.10290748340402E-24"
+        izz="3.19316921944392E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/neck2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/neck2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="neck1_neck2"
+    type="continuous">
+    <origin
+      xyz="0 0.0350000000000001 0"
+      rpy="0 0 0" />
+    <parent
+      link="neck1" />
+    <child
+      link="neck2" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="head">
+    <inertial>
+      <origin
+        xyz="-0.00186105002367657 0.0481968547489414 0.00556034985279367"
+        rpy="0 0 0" />
+      <mass
+        value="2.18249041681575" />
+      <inertia
+        ixx="0.0128206100700187"
+        ixy="7.48963753742721E-05"
+        ixz="-6.95247965776619E-05"
+        iyy="0.0102956103106155"
+        iyz="0.0017547063452221"
+        izz="0.0105148181384294" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/head.STL" />
+      </geometry>
+      <material
+        name="blue">
+        <color
+          rgba="0.72 0.855 0.92 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/head.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="neck2_head"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="neck2" />
+    <child
+      link="head" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="Reyeaxes">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.000168982297150257" />
+      <inertia
+        ixx="9.5699111340672E-10"
+        ixy="5.05917929396829E-27"
+        ixz="-3.09258127711156E-26"
+        iyy="1.37115774490498E-09"
+        iyz="4.57047894118213E-26"
+        izz="9.5699111340672E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/Reyeaxes.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/Reyeaxes.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R_eye_yaw"
+    type="continuous">
+    <origin
+      xyz="-0.0359999999999999 0.0187967300000004 0.0706499999999992"
+      rpy="1.5707963267949 0 3.14159265358979" />
+    <parent
+      link="head" />
+    <child
+      link="Reyeaxes" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Reye">
+    <inertial>
+      <origin
+        xyz="-0.0316929313406804 -0.0457141390326501 0.0349413772851305"
+        rpy="0 0 0" />
+      <mass
+        value="0.0173592310096349" />
+      <inertia
+        ixx="1.51844392353641E-06"
+        ixy="6.81001989489091E-11"
+        ixz="1.19254317120161E-11"
+        iyy="1.57493985123585E-06"
+        iyz="-2.55363289264772E-10"
+        izz="1.52471264065621E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/Reye.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/Reye.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R_eye_pitch"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Reyeaxes" />
+    <child
+      link="Reye" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="R_iris">
+    <inertial>
+      <origin
+        xyz="-0.036531 -0.053897 0.040276"
+        rpy="0 0 0" />
+      <mass
+        value="0.01506" />
+      <inertia
+        ixx="1.3905E-06"
+        ixy="6.8001E-11"
+        ixz="1.1925E-11"
+        iyy="1.363E-06"
+        iyz="-2.5539E-10"
+        izz="1.3902E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/R_iris.STL" />
+      </geometry>
+      <material
+        name="black">
+        <color
+          rgba="0 0 0 0" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/R_iris.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Riris"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Reye" />
+    <child
+      link="R_iris" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Leyeaxes">
+    <inertial>
+      <origin
+        xyz="6.93889390390723E-18 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.000168982297150257" />
+      <inertia
+        ixx="9.5699111340672E-10"
+        ixy="-9.67988906185239E-27"
+        ixz="-3.75339530698154E-26"
+        iyy="1.37115774490497E-09"
+        iyz="1.63376403561861E-26"
+        izz="9.56991113406718E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/Leyeaxes.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/Leyeaxes.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L_eye_yaw"
+    type="continuous">
+    <origin
+      xyz="0.0360000000000001 0.0187967300000004 0.0706499999999992"
+      rpy="1.5707963267949 0 3.14159265358979" />
+    <parent
+      link="head" />
+    <child
+      link="Leyeaxes" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Leye">
+    <inertial>
+      <origin
+        xyz="-0.0316929313406804 -0.0457141390326501 0.0349413772851306"
+        rpy="0 0 0" />
+      <mass
+        value="0.0173592310096348" />
+      <inertia
+        ixx="1.51844392353641E-06"
+        ixy="6.81001989491498E-11"
+        ixz="1.19254317122845E-11"
+        iyy="1.57493985123585E-06"
+        iyz="-2.55363289264736E-10"
+        izz="1.52471264065621E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/Leye.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/Leye.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L_eye_pitch"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Leyeaxes" />
+    <child
+      link="Leye" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="L_iris">
+    <inertial>
+      <origin
+        xyz="-0.036531 -0.053897 0.040276"
+        rpy="0 0 0" />
+      <mass
+        value="0.01506" />
+      <inertia
+        ixx="1.3905E-06"
+        ixy="6.8001E-11"
+        ixz="1.1925E-11"
+        iyy="1.363E-06"
+        iyz="-2.5539E-10"
+        izz="1.3902E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/L_iris.STL" />
+      </geometry>
+      <material
+        name="black">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/L_iris.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Liris"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Leye" />
+    <child
+      link="L_iris" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="R_upper_eyelid">
+    <inertial>
+      <origin
+        xyz="0.00384852234570486 0.0126171384666969 0.0030925067360336"
+        rpy="0 0 0" />
+      <mass
+        value="0.00110158958912805" />
+      <inertia
+        ixx="5.51640247124685E-08"
+        ixy="3.60659370225095E-08"
+        ixz="9.0394436952125E-09"
+        iyy="1.69706059499129E-07"
+        iyz="2.4522686481223E-09"
+        izz="1.95724387249401E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/R_upper_eyelid.STL" />
+      </geometry>
+      <material
+        name="blue">
+        <color
+          rgba="0.72 0.855 0.92 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/R_upper_eyelid.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Ruppereyelid"
+    type="continuous">
+    <origin
+      xyz="-0.0359999999999999 0.0187967300000004 0.0706499999999992"
+      rpy="0 0 0" />
+    <parent
+      link="head" />
+    <child
+      link="R_upper_eyelid" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="L_upper_eyelid">
+    <inertial>
+      <origin
+        xyz="0.00384898228284601 0.0126175888983564 -0.00309228256802278"
+        rpy="0 0 0" />
+      <mass
+        value="0.00110164402832034" />
+      <inertia
+        ixx="5.51490631767431E-08"
+        ixy="3.60602599286577E-08"
+        ixz="-9.04224167977674E-09"
+        iyy="1.69710503833023E-07"
+        iyz="-2.4484059935919E-09"
+        izz="1.95715726424481E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/L_upper_eyelid.STL" />
+      </geometry>
+      <material
+        name="blue">
+        <color
+          rgba="0.72 0.855 0.92 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/L_upper_eyelid.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Luppereyelid"
+    type="continuous">
+    <origin
+      xyz="0.0360000000000001 0.0187967300000004 0.0706499999999992"
+      rpy="3.14159265358979 0 -3.14159265358976" />
+    <parent
+      link="head" />
+    <child
+      link="L_upper_eyelid" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="R_lower_eyelid">
+    <inertial>
+      <origin
+        xyz="0.0123941558852077 0.001532484086135 0.0100343804552899"
+        rpy="0 0 0" />
+      <mass
+        value="0.0014920108135339" />
+      <inertia
+        ixx="7.80910415897716E-08"
+        ixy="3.72727282660142E-08"
+        ixz="7.36352061147401E-08"
+        iyy="2.80961259377705E-07"
+        iyz="-8.52229702830172E-09"
+        izz="2.42070759773108E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/R_lower_eyelid.STL" />
+      </geometry>
+      <material
+        name="blue">
+        <color
+          rgba="0.72 0.855 0.92 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/R_lower_eyelid.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rlowereyelid"
+    type="continuous">
+    <origin
+      xyz="-0.0359999999999999 0.0187967300000004 0.0706499999999992"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="head" />
+    <child
+      link="R_lower_eyelid" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="L_lower_eyelid">
+    <inertial>
+      <origin
+        xyz="0.0123941551092204 0.00153249738560822 -0.0100343478238727"
+        rpy="0 0 0" />
+      <mass
+        value="0.00149201318753432" />
+      <inertia
+        ixx="7.80916043091218E-08"
+        ixy="3.72727275823816E-08"
+        ixz="-7.36353432204461E-08"
+        iyy="2.80961912265365E-07"
+        iyz="8.52210104288812E-09"
+        izz="2.4207101204463E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/L_lower_eyelid.STL" />
+      </geometry>
+      <material
+        name="blue">
+        <color
+          rgba="0.72 0.855 0.92 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://face_sim/meshes/L_lower_eyelid.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Llowereyelid"
+    type="continuous">
+    <origin
+      xyz="0.0360000000000001 0.0187967300000004 0.0706499999999992"
+      rpy="1.5707963267949 0 3.14159265358979" />
+    <parent
+      link="head" />
+    <child
+      link="L_lower_eyelid" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+</robot>
